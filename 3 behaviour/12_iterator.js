@@ -10,16 +10,16 @@ class MyIterator {
         if (this.index < this.data.length) {
           return {
             value: this.data[this.index++],
-            done: false
+            done: false,
           }
         } else {
           this.index = 0
           return {
             done: true,
-            value: void 0
+            value: void 0,
           }
         }
-      }
+      },
     }
   }
 }
@@ -32,7 +32,6 @@ function* generator(collection) {
   }
 }
 
-
 const iterator = new MyIterator(['This', 'is', 'iterator'])
 const gen = generator(['This', 'is', 'iterator'])
 
@@ -43,5 +42,3 @@ const gen = generator(['This', 'is', 'iterator'])
 console.log(gen.next().value)
 console.log(gen.next().value)
 console.log(gen.next().value)
-
-

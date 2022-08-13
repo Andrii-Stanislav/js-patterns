@@ -8,11 +8,11 @@ class Subject {
   }
 
   unsubscribe(observer) {
-    this.observers = this.observers.filter(obs => obs !== observer)
+    this.observers = this.observers.filter((obs) => obs !== observer)
   }
 
   fire(action) {
-    this.observers.forEach(observer => {
+    this.observers.forEach((observer) => {
       observer.update(action)
     })
   }
@@ -49,10 +49,10 @@ const obs2 = new Observer(42)
 stream$.subscribe(obs1)
 stream$.subscribe(obs2)
 
-stream$.fire({type: 'INCREMENT'})
-stream$.fire({type: 'INCREMENT'})
-stream$.fire({type: 'DECREMENT'})
-stream$.fire({type: 'ADD', payload: 10})
+stream$.fire({ type: 'INCREMENT' })
+stream$.fire({ type: 'INCREMENT' })
+stream$.fire({ type: 'DECREMENT' })
+stream$.fire({ type: 'ADD', payload: 10 })
 
 console.log(obs1.state)
 console.log(obs2.state)

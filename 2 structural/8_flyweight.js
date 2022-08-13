@@ -22,7 +22,7 @@ class CarFactory {
   }
 
   getCar(model) {
-    return this.cars.find(car => car.model === model)
+    return this.cars.find((car) => car.model === model)
   }
 }
 
@@ -33,4 +33,3 @@ const audi = factory.create('audi', 12000)
 const bmwX3 = factory.create('bmw', 8000)
 
 console.log(bmwX3 === bmwX6)
-

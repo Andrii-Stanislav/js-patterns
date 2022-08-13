@@ -1,3 +1,4 @@
+// 1 variant
 // function Server(name, ip) {
 //   this.name = name
 //   this.ip = ip
@@ -7,6 +8,7 @@
 //   return `https://${this.ip}:80`
 // }
 
+// 2 variant
 class Server {
   constructor(name, ip) {
     this.name = name

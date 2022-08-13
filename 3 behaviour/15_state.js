@@ -36,17 +36,13 @@ class GreenLight extends Light {
 
 class TrafficLight {
   constructor() {
-    this.states = [
-      new RedLight(),
-      new YellowLight(),
-      new GreenLight()
-    ]
+    this.states = [new RedLight(), new YellowLight(), new GreenLight()]
     this.current = this.states[0]
   }
 
   change() {
     const total = this.states.length
-    let index = this.states.findIndex(light => light === this.current)
+    let index = this.states.findIndex((light) => light === this.current)
 
     if (index + 1 < total) {
       this.current = this.states[index + 1]

@@ -12,7 +12,7 @@ const proxiedFetch = new Proxy(networkFetch, {
       cache.add(url)
       return Reflect.apply(target, thisArg, args)
     }
-  }
+  },
 })
 
 console.log(proxiedFetch('angular.io'))

@@ -4,6 +4,13 @@ class Vehicle {
   }
 }
 
+class Walking extends Vehicle {
+  constructor() {
+    super()
+    this.timeTaken = 20
+  }
+}
+
 class Bus extends Vehicle {
   constructor() {
     super()
@@ -33,6 +40,7 @@ class Commute {
 
 const commute = new Commute()
 
-console.log(commute.travel(new Taxi()))
+console.log(commute.travel(new Walking()))
 console.log(commute.travel(new Bus()))
+console.log(commute.travel(new Taxi()))
 console.log(commute.travel(new Car()))

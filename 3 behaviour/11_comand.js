@@ -19,8 +19,11 @@ class Command {
   }
 
   execute(command) {
-    this.commandsExecuted.push(command)
-    return this.subject[command]()
+    if (this.subject[command]) {
+      this.commandsExecuted.push(command)
+      return this.subject[command]()
+    }
+    return 'command not found'
   }
 }
 
@@ -28,6 +31,6 @@ const x = new Command(new MyMath(2))
 
 console.log(x.execute('square'))
 console.log(x.execute('cube'))
+console.log(x.execute('qweqwe'))
 
 console.log(x.commandsExecuted)
-

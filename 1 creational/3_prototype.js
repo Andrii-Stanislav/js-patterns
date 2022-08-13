@@ -6,6 +6,7 @@ const car = {
   },
 }
 
+// TODO to understand
 const carWithOwner = Object.create(car, {
   owner: {
     value: 'Дмитрий',

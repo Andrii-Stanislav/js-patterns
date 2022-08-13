@@ -1,9 +1,12 @@
 class OldCalc {
   operations(t1, t2, operation) {
     switch (operation) {
-      case 'add': return t1 + t2
-      case 'sub': return t1 - t2
-      default: return NaN
+      case 'add':
+        return t1 + t2
+      case 'sub':
+        return t1 - t2
+      default:
+        return NaN
     }
   }
 }
@@ -25,9 +28,12 @@ class CalcAdapter {
 
   operations(t1, t2, operation) {
     switch (operation) {
-      case 'add': return this.calc.add(t1, t2)
-      case 'sub': return this.calc.sub(t1, t2)
-      default: return NaN
+      case 'add':
+        return this.calc.add(t1, t2)
+      case 'sub':
+        return this.calc.sub(t1, t2)
+      default:
+        return NaN
     }
   }
 }
@@ -40,5 +46,3 @@ console.log(newCalc.add(10, 5))
 
 const adapter = new CalcAdapter()
 console.log(adapter.operations(25, 10, 'sub'))
-
-

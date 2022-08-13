@@ -27,7 +27,7 @@ class ChatRoom {
     if (to) {
       to.receive(message, from)
     } else {
-      Object.keys(this.users).forEach(key => {
+      Object.keys(this.users).forEach((key) => {
         if (this.users[key] !== from) {
           this.users[key].receive(message, from)
         }
